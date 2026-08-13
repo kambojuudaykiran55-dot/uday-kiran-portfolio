@@ -5,98 +5,437 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Kamboju Uday Kiran | Aspiring Data Analyst Portfolio">
   <title>Kamboju Uday Kiran | Aspiring Data Analyst</title>
+
   <link rel="stylesheet" href="style.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
+
   <div id="loader" class="loader">
-    <button class="loader-logo" type="button" onclick="enterPortfolio()" aria-label="Open Uday Kiran portfolio">UK</button>
+    <button
+      class="loader-logo"
+      type="button"
+      onclick="enterPortfolio()"
+      aria-label="Open Uday Kiran portfolio">
+      UK
+    </button>
+
     <p>Press UK to open portfolio</p>
   </div>
 
+
   <main id="app" class="app hidden">
+
     <section id="home" class="home-section">
+
       <div class="top-panel"></div>
 
+
       <div class="hero">
+
         <div class="profile-card">
+
           <div class="profile-photo-wrap">
-            <img id="homeProfileImage" src="assets/profile.png" alt="Kamboju Uday Kiran">
+            <img
+              id="homeProfileImage"
+              src="assets/profile.png"
+              alt="Kamboju Uday Kiran">
           </div>
+
           <h2>Kamboju Uday Kiran</h2>
+
           <p>Aspiring Data Analyst</p>
+
+
           <div class="profile-actions">
-            <button class="contact-btn" type="button" onclick="openContactModal()">
-              <i class="fa-solid fa-address-card"></i> Contact Details
+
+            <button
+              class="contact-btn"
+              type="button"
+              onclick="openContactModal()">
+
+              <i class="fa-solid fa-address-card"></i>
+              Contact Details
+
             </button>
-            <a class="resume-btn" href="assets/Uday-Kiran-Resume.pdf" target="_blank" rel="noopener">
-              <i class="fa-solid fa-file-lines"></i> View Resume
+
+
+            <a
+              class="resume-btn"
+              href="assets/Uday-Kiran-Resume.pdf"
+              target="_blank"
+              rel="noopener">
+
+              <i class="fa-solid fa-file-lines"></i>
+              View Resume
+
             </a>
+
           </div>
+
         </div>
+
       </div>
+
 
       <section id="sectionNav" class="section-nav">
+
         <div class="section-nav-title">
+
           <span>Explore</span>
+
           <h2>My Portfolio</h2>
+
         </div>
+
+
         <div class="nav-grid">
-          <button class="nav-card" onclick="openSection('skills')"><i class="fa-solid fa-code"></i><span>Skills</span><small>Technical expertise</small></button>
-          <button class="nav-card" onclick="openSection('experience')"><i class="fa-solid fa-briefcase"></i><span>Experience</span><small>Professional journey</small></button>
-          <button class="nav-card" onclick="openSection('achievements')"><i class="fa-solid fa-trophy"></i><span>Certifications & Profiles</span><small>Certifications & professional profile</small></button>
-          <button class="nav-card" onclick="openSection('projects')"><i class="fa-solid fa-diagram-project"></i><span>Projects</span><small>Selected analytical work</small></button>
+
+          <button
+            class="nav-card"
+            onclick="openSection('skills')">
+
+            <i class="fa-solid fa-code"></i>
+
+            <span>Skills</span>
+
+            <small>Technical expertise</small>
+
+          </button>
+
+
+          <button
+            class="nav-card"
+            onclick="openSection('experience')">
+
+            <i class="fa-solid fa-briefcase"></i>
+
+            <span>Experience</span>
+
+            <small>Professional journey</small>
+
+          </button>
+
+
+          <button
+            class="nav-card"
+            onclick="openSection('achievements')">
+
+            <i class="fa-solid fa-trophy"></i>
+
+            <span>Certifications & Profiles</span>
+
+            <small>Certifications & professional profile</small>
+
+          </button>
+
+
+          <button
+            class="nav-card"
+            onclick="openSection('projects')">
+
+            <i class="fa-solid fa-diagram-project"></i>
+
+            <span>Projects</span>
+
+            <small>Selected analytical work</small>
+
+          </button>
+
         </div>
+
       </section>
+
 
       <section class="visitor-section">
+
         <div class="visitor-content">
-          <p class="eyebrow">THANK YOU FOR VISITING</p>
+
+          <p class="eyebrow">
+            THANK YOU FOR VISITING
+          </p>
+
+
           <h2>Let's connect.</h2>
-          <p>Recruiter or professional? Leave your details and a message. Once this portfolio is connected to the live form service, submissions will be delivered to Uday's email.</p>
-          <form id="visitorForm" name="portfolio-feedback" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
-            <input type="hidden" name="form-name" value="portfolio-feedback">
-            <p class="honeypot" aria-hidden="true"><label>Do not fill this out: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+
+
+          <p>
+            Recruiter or professional? Leave your details and a message.
+            Once this portfolio is connected to the live form service,
+            submissions will be delivered to Uday's email.
+          </p>
+
+
+          <!-- Netlify Form -->
+
+          <form
+            id="visitorForm"
+            name="portfolio-feedback"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field">
+
+            <!-- Required by Netlify -->
+            <input
+              type="hidden"
+              name="form-name"
+              value="portfolio-feedback">
+
+
+            <!-- Honeypot spam protection -->
+
+            <p
+              class="honeypot"
+              aria-hidden="true">
+
+              <label>
+                Do not fill this out:
+
+                <input
+                  name="bot-field"
+                  tabindex="-1"
+                  autocomplete="off">
+
+              </label>
+
+            </p>
+
+
             <div class="form-grid">
-              <label>Name<input required name="name" type="text" placeholder="Your name"></label>
-              <label>Company<input name="company" type="text" placeholder="Company name"></label>
-              <label>Email<input required name="email" type="email" placeholder="you@example.com"></label>
-              <label>Phone<input name="phone" type="tel" placeholder="+91..."></label>
+
+              <label>
+                Name
+
+                <input
+                  required
+                  name="name"
+                  type="text"
+                  placeholder="Your name">
+
+              </label>
+
+
+              <label>
+                Company
+
+                <input
+                  name="company"
+                  type="text"
+                  placeholder="Company name">
+
+              </label>
+
+
+              <label>
+                Email
+
+                <input
+                  required
+                  name="email"
+                  type="email"
+                  placeholder="you@example.com">
+
+              </label>
+
+
+              <label>
+                Phone
+
+                <input
+                  name="phone"
+                  type="tel"
+                  placeholder="+91...">
+
+              </label>
+
             </div>
-            <label>Reason for visiting<textarea required name="reason" rows="4" placeholder="I'd like to discuss..."></textarea></label>
-            <button class="primary-btn" type="submit">Submit <i class="fa-solid fa-paper-plane"></i></button>
+
+
+            <label>
+
+              Reason for visiting
+
+              <textarea
+                required
+                name="reason"
+                rows="4"
+                placeholder="I'd like to discuss..."></textarea>
+
+            </label>
+
+
+            <button
+              class="primary-btn"
+              type="submit">
+
+              Submit
+
+              <i class="fa-solid fa-paper-plane"></i>
+
+            </button>
+
           </form>
-          <div class="visitor-count"><i class="fa-solid fa-eye"></i> Portfolio visits: <strong id="visitorCount">0</strong></div>
+
+
+          <div class="visitor-count">
+
+            <i class="fa-solid fa-eye"></i>
+
+            Portfolio visits:
+
+            <strong id="visitorCount">0</strong>
+
+          </div>
+
         </div>
+
       </section>
-      <footer>© <span id="year"></span> Kamboju Uday Kiran • Built with HTML, CSS & JavaScript</footer>
+
+
+      <footer>
+
+        © <span id="year"></span>
+        Kamboju Uday Kiran
+        • Built with HTML, CSS & JavaScript
+
+      </footer>
+
     </section>
 
-    <section id="detailView" class="detail-view" aria-hidden="true">
+
+    <section
+      id="detailView"
+      class="detail-view"
+      aria-hidden="true">
+
       <div class="detail-header">
-        <button class="back-btn" onclick="goHome()"><i class="fa-solid fa-arrow-left"></i> Back</button>
-        <div class="mini-logo">UK</div>
+
+        <button
+          class="back-btn"
+          onclick="goHome()">
+
+          <i class="fa-solid fa-arrow-left"></i>
+          Back
+
+        </button>
+
+
+        <div class="mini-logo">
+          UK
+        </div>
+
       </div>
-      <div id="detailContent" class="detail-content"></div>
+
+
+      <div
+        id="detailContent"
+        class="detail-content">
+      </div>
+
     </section>
+
   </main>
 
-  <div id="contactModal" class="contact-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+
+  <!-- Contact Details Modal -->
+
+  <div
+    id="contactModal"
+    class="contact-modal"
+    aria-hidden="true"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="contactModalTitle">
+
+
     <div class="contact-modal-card">
-      <button class="modal-close" type="button" onclick="closeContactModal()" aria-label="Close contact details">&times;</button>
-      <p class="eyebrow">GET IN TOUCH</p>
-      <h2 id="contactModalTitle">Contact Details</h2>
+
+
+      <button
+        class="modal-close"
+        type="button"
+        onclick="closeContactModal()"
+        aria-label="Close contact details">
+
+        &times;
+
+      </button>
+
+
+      <p class="eyebrow">
+        GET IN TOUCH
+      </p>
+
+
+      <h2 id="contactModalTitle">
+        Contact Details
+      </h2>
+
+
       <div class="modal-contact-list">
-        <a href="mailto:kambojuudaykiran55@gmail.com"><i class="fa-solid fa-envelope"></i><span>kambojuudaykiran55@gmail.com</span></a>
-        <a href="tel:+919573415684"><i class="fa-solid fa-phone"></i><span>+91 95734 15684</span></a>
-        <span><i class="fa-solid fa-location-dot"></i><span>Hyderabad, Telangana</span></span>
-        <a href="https://www.linkedin.com/in/udaykiran9573/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i><span>LinkedIn Profile</span></a>
+
+
+        <a
+          href="mailto:kambojuudaykiran55@gmail.com">
+
+          <i class="fa-solid fa-envelope"></i>
+
+          <span>
+            kambojuudaykiran55@gmail.com
+          </span>
+
+        </a>
+
+
+        <a
+          href="tel:+919573415684">
+
+          <i class="fa-solid fa-phone"></i>
+
+          <span>
+            +91 95734 15684
+          </span>
+
+        </a>
+
+
+        <span>
+
+          <i class="fa-solid fa-location-dot"></i>
+
+          <span>
+            Hyderabad, Telangana
+          </span>
+
+        </span>
+
+
+        <a
+          href="https://www.linkedin.com/in/udaykiran9573/"
+          target="_blank"
+          rel="noopener">
+
+          <i class="fa-brands fa-linkedin"></i>
+
+          <span>
+            LinkedIn Profile
+          </span>
+
+        </a>
+
       </div>
+
     </div>
+
   </div>
 
+
   <script src="script.js"></script>
+
 </body>
 </html>
